@@ -1,0 +1,17 @@
+{
+  "id": "chibi-asuka",
+  "name": "Chibi Asuka Pet",
+  "displayName": "Chibi Asuka",
+  "description": "A chibi orange-haired red mecha-pilot Codex pet inspired by the provided anime sticker artwork.",
+  "version": "0.1.0",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "assets/spritesheet.webp",
+  "spritesheet": "assets/spritesheet.webp",
+  "spriteSheet": "assets/spritesheet.webp",
+  "frameWidth": 192,
+  "frameHeight": 208,
+  "frame_width": 192,
+  "frame_height": 208,
+  "columns": 8,
+  "rows": 11
+}

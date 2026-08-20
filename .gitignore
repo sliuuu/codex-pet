@@ -1,0 +1,48 @@
+.DS_Store
+Thumbs.db
+
+# Secrets and local configuration.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.mobileprovision
+secrets/
+private/
+credentials/
+*.token
+*.secret
+
+# Logs and local runtime state.
+*.log
+logs/
+tmp/
+temp/
+.cache/
+.tmp/
+
+# Dependency and build outputs.
+node_modules/
+dist/
+build/
+out/
+.next/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Archives and generated source dumps.
+*.zip
+
+# Older loose generation artifacts kept locally but not part of the showcase repo.
+/sd-gundam-codex-pet/
+/chibi-asuka-pet/
+/spritesheet.png
+/spritesheet_raw.png
+/preview_checkerboard.png

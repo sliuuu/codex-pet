@@ -1,0 +1,17 @@
+{
+  "id": "sd-gundam-codex-pet",
+  "name": "SD Gundam Codex Pet",
+  "displayName": "SD Gundam",
+  "description": "Polished SD Gundam custom Codex pet rebuilt as a clean v2 spritesheet with looking directions.",
+  "version": "0.1.1",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "assets/spritesheet.webp",
+  "spritesheet": "assets/spritesheet.webp",
+  "spriteSheet": "assets/spritesheet.webp",
+  "frameWidth": 192,
+  "frameHeight": 208,
+  "frame_width": 192,
+  "frame_height": 208,
+  "columns": 8,
+  "rows": 11
+}
