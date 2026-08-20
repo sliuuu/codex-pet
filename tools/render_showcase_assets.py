@@ -15,6 +15,9 @@ PETS = [
 CELL_W = 192
 CELL_H = 208
 SCALE = 2
+GIF_PADDING = {
+    ("chibi-asuka", "sad"): (0, 24, 0, 0),
+}
 
 
 def font(size: int) -> ImageFont.ImageFont:
@@ -54,14 +57,30 @@ def scale_cell(cell: Image.Image, scale: int = SCALE) -> Image.Image:
     return cell.resize((CELL_W * scale, CELL_H * scale), Image.Resampling.NEAREST)
 
 
+def pad_cell(cell: Image.Image, padding: tuple[int, int, int, int]) -> Image.Image:
+    left, top, right, bottom = padding
+    if not any(padding):
+        return cell
+    out = Image.new("RGBA", (cell.width + left + right, cell.height + top + bottom), (0, 0, 0, 0))
+    out.alpha_composite(cell, (left, top))
+    return out
+
+
 def composite_cell(cell: Image.Image, bg: str = "#f8fafc") -> Image.Image:
     out = Image.new("RGBA", cell.size, bg)
     out.alpha_composite(cell)
     return out.convert("P", palette=Image.Palette.ADAPTIVE)
 
 
-def save_gif(sheet: Image.Image, frames: list[int], out: Path, fps: int) -> None:
-    rendered = [composite_cell(scale_cell(crop_cell(sheet, idx))) for idx in frames]
+def save_gif(
+    sheet: Image.Image,
+    frames: list[int],
+    out: Path,
+    fps: int,
+    padding: tuple[int, int, int, int] = (0, 0, 0, 0),
+) -> None:
+    scaled_padding = tuple(value * SCALE for value in padding)
+    rendered = [composite_cell(pad_cell(scale_cell(crop_cell(sheet, idx)), scaled_padding)) for idx in frames]
     duration = max(60, int(1000 / max(1, fps)))
     rendered[0].save(
         out,
@@ -154,7 +173,8 @@ def main() -> None:
         save_screenshot(sheet, pet_name, showcase_dir / "in-action.png")
 
         for state, cfg in pet_json["animations"].items():
-            save_gif(sheet, cfg["frames"], animations_dir / f"{state}.gif", cfg.get("fps", 8))
+            padding = GIF_PADDING.get((pet_id, state), (0, 0, 0, 0))
+            save_gif(sheet, cfg["frames"], animations_dir / f"{state}.gif", cfg.get("fps", 8), padding)
         save_look_gif(sheet, animations_dir / "look-directions.gif")
 
 
