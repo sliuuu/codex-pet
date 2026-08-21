@@ -1,0 +1,17 @@
+{
+  "id": "chibi-miku",
+  "name": "Chibi Miku Pet",
+  "displayName": "Chibi Miku",
+  "description": "A cheerful teal twin-tail chibi idol Codex pet with expressive animations, clean sad/failed frames, and v2 look directions.",
+  "version": "0.1.0",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "assets/spritesheet.webp",
+  "spritesheet": "assets/spritesheet.webp",
+  "spriteSheet": "assets/spritesheet.webp",
+  "frameWidth": 192,
+  "frameHeight": 208,
+  "frame_width": 192,
+  "frame_height": 208,
+  "columns": 8,
+  "rows": 11
+}

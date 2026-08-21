@@ -2,7 +2,7 @@
 
 ChatGPT Desktop-inspired digital pets that live on the desktop, react to activity, and showcase animated character behaviors through Codex-compatible v2 sprite atlases.
 
-This repository is a self-contained public showcase for two polished animated pets. It includes installable pet folders, transparent spritesheets, generated screenshots, GIF demonstrations for every supported animation state, and a small asset pipeline for regenerating the showcase media from the committed spritesheets.
+This repository is a self-contained public showcase for three polished animated pets. It includes installable pet folders, transparent spritesheets, generated screenshots, GIF demonstrations for every supported animation state, and a small asset pipeline for regenerating the showcase media from the committed spritesheets.
 
 ## Feature Overview
 
@@ -18,6 +18,7 @@ This repository is a self-contained public showcase for two polished animated pe
 | --- | --- | --- |
 | SD Gundam | Super-deformed mecha pixel-art mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 | Chibi Asuka | Chibi red-suit mecha-pilot mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
+| Chibi Miku | Chibi teal twin-tail idol mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 
 Both pets include the nine standard Codex animation rows plus two v2 look-direction rows covering 16 clockwise gaze directions.
 
@@ -67,6 +68,34 @@ Both pets include the nine standard Codex animation rows plus two v2 look-direct
 
 ![Chibi Asuka contact sheet](showcase/chibi-asuka/contact-sheet.png)
 
+## Chibi Miku
+
+![Chibi Miku in action](showcase/chibi-miku/in-action.png)
+
+### Animation Previews
+
+| State | Preview |
+| --- | --- |
+| Idle | ![Chibi Miku idle](showcase/chibi-miku/animations/idle.gif) |
+| Run right / walk right | ![Chibi Miku running right](showcase/chibi-miku/animations/running-right.gif) |
+| Run left / walk left | ![Chibi Miku running left](showcase/chibi-miku/animations/running-left.gif) |
+| Wave / happy emote | ![Chibi Miku waving](showcase/chibi-miku/animations/waving.gif) |
+| Jump / excited | ![Chibi Miku jumping](showcase/chibi-miku/animations/jumping.gif) |
+| Failed / sad emote | ![Chibi Miku sad](showcase/chibi-miku/animations/sad.gif) |
+| Waiting / thinking | ![Chibi Miku waiting](showcase/chibi-miku/animations/waiting.gif) |
+| Running / active work | ![Chibi Miku running](showcase/chibi-miku/animations/running.gif) |
+| Review / celebrate | ![Chibi Miku review](showcase/chibi-miku/animations/bouncing.gif) |
+| Sleep showcase | ![Chibi Miku sleep](showcase/chibi-miku/animations/sleep.gif) |
+| 16 look directions | ![Chibi Miku look directions](showcase/chibi-miku/animations/look-directions.gif) |
+
+### Combined Preview
+
+![Chibi Miku combined preview](showcase/chibi-miku/animations/combined-preview.gif)
+
+### Sprite Sheet QA
+
+![Chibi Miku contact sheet](showcase/chibi-miku/contact-sheet.png)
+
 ## Animation Summary
 
 | Codex row | State | Frames | Purpose |
@@ -93,6 +122,7 @@ Copy either pet folder into your local Codex pets directory:
 mkdir -p ~/.codex/pets
 cp -R pets/sd-gundam-codex-pet ~/.codex/pets/
 cp -R pets/chibi-asuka ~/.codex/pets/
+cp -R pets/chibi-miku ~/.codex/pets/
 ```
 
 Each pet folder contains:
@@ -113,6 +143,7 @@ Both installed source atlases were validated with the hatch-pet atlas validator 
 | --- | --- | --- | --- |
 | SD Gundam | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings |
 | Chibi Asuka | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings |
+| Chibi Miku | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings; sad/failed row regenerated to remove hair ghosting and alignment drift |
 
 The generated contact sheets above are rendered directly from the committed `assets/spritesheet.webp` files. Empty cells are intentional unused slots in variable-length animation rows; populated cells are clipped to `192x208` and render on transparent backgrounds.
 

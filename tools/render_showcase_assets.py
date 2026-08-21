@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PETS = [
     ("sd-gundam-codex-pet", "SD Gundam"),
     ("chibi-asuka", "Chibi Asuka"),
+    ("chibi-miku", "Chibi Miku"),
 ]
 CELL_W = 192
 CELL_H = 208
