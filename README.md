@@ -10,7 +10,7 @@ This repository is a self-contained public showcase for three polished animated 
 - Installable Codex pet folders with `pet.json`, `avatar.json`, and `assets/spritesheet.webp`.
 - GitHub-rendered animation showcase using relative image paths only.
 - Reproducible preview generation via `tools/render_showcase_assets.py`.
-- Validated v2 sprite contract: `1536x2288` atlas, `8x11` grid, `192x208` cells, transparent backgrounds, and no validator warnings.
+- Validated v2 sprite contract: `1536x2288` atlas, `8x11` grid, `192x208` cells, transparent backgrounds, no validator warnings, and strict cell-safety QA with at least 10% transparent padding per side and at most 80% silhouette occupancy.
 
 ## Pets
 
@@ -20,7 +20,7 @@ This repository is a self-contained public showcase for three polished animated 
 | Chibi Asuka | Chibi red-suit mecha-pilot mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 | Chibi Miku | Chibi teal twin-tail idol mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 
-Both pets include the nine standard Codex animation rows plus two v2 look-direction rows covering 16 clockwise gaze directions.
+All pets include the nine standard Codex animation rows plus two v2 look-direction rows covering 16 clockwise gaze directions.
 
 ## SD Gundam
 
@@ -96,6 +96,14 @@ Both pets include the nine standard Codex animation rows plus two v2 look-direct
 
 ![Chibi Miku contact sheet](showcase/chibi-miku/contact-sheet.png)
 
+### Cell Safety QA
+
+![Chibi Miku cell safety overlay](showcase/chibi-miku/cell-safety-overlay.png)
+
+Blue marks each `192x208` cell, red marks the 10% safe boundary, and green marks the detected character bounds. The build rejects boundary contact, overflow, non-transparent unused cells, scale drift, and lower-body anchor drift before generating GIF previews.
+
+The [Chibi Miku source lineage](showcase/chibi-miku/source-lineage.json) records the generation-to-atlas gates. Generated rows must first pass source-canvas edge, slot padding, occupancy, and transparent-gutter validation; failed source art cannot proceed to extraction or GIF export.
+
 ## Animation Summary
 
 | Codex row | State | Frames | Purpose |
@@ -116,7 +124,7 @@ There is no dedicated attack row in the Codex pet contract used here. Combat-sty
 
 ## Installation
 
-Copy either pet folder into your local Codex pets directory:
+Copy any pet folder into your local Codex pets directory:
 
 ```bash
 mkdir -p ~/.codex/pets
@@ -137,22 +145,24 @@ The manifests point to `assets/spritesheet.webp` and declare `spriteVersionNumbe
 
 ## Validation
 
-Both installed source atlases were validated with the hatch-pet atlas validator before this repo was prepared:
+All source atlases were validated with the hatch-pet atlas validator before this repo was prepared:
 
 | Pet | Result | Dimensions | Notes |
 | --- | --- | --- | --- |
 | SD Gundam | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings |
 | Chibi Asuka | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings |
-| Chibi Miku | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings; sad/failed row regenerated to remove hair ghosting and alignment drift |
+| Chibi Miku | Pass | `1536x2288` | One shared scale across all frames; 10% per-side transparent padding, 80% maximum occupancy, stable lower-body anchors, transparent unused cells, and no clipping, overflow, detached fragments, or validator warnings |
 
 The generated contact sheets above are rendered directly from the committed `assets/spritesheet.webp` files. Empty cells are intentional unused slots in variable-length animation rows; populated cells are clipped to `192x208` and render on transparent backgrounds.
 
 ## Regenerate Showcase Assets
 
-The preview GIFs, screenshots, and contact sheets can be regenerated from the committed spritesheets:
+The preview GIFs, screenshots, contact sheets, and Chibi Miku cell-safety QA overlay can be regenerated from the committed spritesheets:
 
 ```bash
 python3 tools/render_showcase_assets.py
 ```
 
 The script does not alter the pet manifests or sprite sheets; it only refreshes files under `showcase/`.
+
+Source-stage boundary enforcement is tracked under [`tools/hatch_pet`](tools/hatch_pet/README.md). The guarded extractor blocks sprite-sheet creation unless every generated row first passes the 10% padding, 80% occupancy, transparent-gutter, and source-edge checks.

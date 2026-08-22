@@ -1,0 +1,41 @@
+{
+  "ok": true,
+  "pet": "chibi-miku",
+  "pipeline": [
+    "canonical reference",
+    "generated source artwork",
+    "source-safe normalized artwork",
+    "validated frame extraction",
+    "8x11 atlas assembly",
+    "shared-scale and anchor normalization",
+    "chroma despill",
+    "GIF and showcase export"
+  ],
+  "source_gate": {
+    "minimum_transparent_padding_percent": 10,
+    "maximum_occupancy_percent": 80,
+    "internal_guard_bands_must_be_transparent": true,
+    "raw_edge_contact_requires_regeneration": true,
+    "failed_rows_block_atlas_creation": true
+  },
+  "regenerated_rows": [
+    "idle",
+    "running-right",
+    "waving",
+    "jumping",
+    "running"
+  ],
+  "revalidated_rows": [
+    "running-left",
+    "failed",
+    "waiting",
+    "review",
+    "look-row-9",
+    "look-row-10"
+  ],
+  "spritesheet": "../../pets/chibi-miku/assets/spritesheet.webp",
+  "spritesheet_sha256": "b352be5fc72edb52446291ec437de4606af9d44b77f43d9c206167c2300a83a2",
+  "validation": "validation.json",
+  "cell_safety": "cell-safety.json",
+  "cell_safety_overlay": "cell-safety-overlay.png"
+}
