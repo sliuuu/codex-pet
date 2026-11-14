@@ -1,0 +1,366 @@
+{
+  "ok": true,
+  "scope": "All 40 new GIFs decode, animate, loop, have positive frame durations and expected dimensions. README/provenance relative links exist. This is not a semantic motion-quality certification.",
+  "previews": [
+    {
+      "file": "showcase/green-zaku/animations/bouncing.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/idle.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/jumping.gif",
+      "frames": 5,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/look-directions.gif",
+      "frames": 16,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/running-left.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/running-right.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/running.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/sad.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/waiting.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/green-zaku/animations/waving.gif",
+      "frames": 4,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/bouncing.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/idle.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/jumping.gif",
+      "frames": 5,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/look-directions.gif",
+      "frames": 16,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/running-left.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/running-right.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/running.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/sad.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/waiting.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/red-zaku/animations/waving.gif",
+      "frames": 4,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/bouncing.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/idle.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/jumping.gif",
+      "frames": 5,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/look-directions.gif",
+      "frames": 16,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/running-left.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/running-right.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/running.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/sad.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/waiting.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gouf/animations/waving.gif",
+      "frames": 4,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/bouncing.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/idle.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/jumping.gif",
+      "frames": 5,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/look-directions.gif",
+      "frames": 16,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/running-left.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/running-right.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/running.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/sad.gif",
+      "frames": 8,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/waiting.gif",
+      "frames": 6,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    },
+    {
+      "file": "showcase/gm/animations/waving.gif",
+      "frames": 4,
+      "size": [
+        384,
+        416
+      ],
+      "loop": 0
+    }
+  ]
+}

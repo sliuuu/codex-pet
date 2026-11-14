@@ -1,0 +1,62 @@
+{
+  "scale_factor": 2,
+  "method": "Identical integer magnification; vertical translation aligns the alpha bounds' bottom. Source atlas pixels remain unchanged.",
+  "scope": "One first-idle frame per pet, not a claim about every frame or canon proportions.",
+  "measurements": [
+    {
+      "pet": "sd-gundam-codex-pet",
+      "frame": "idle[0]",
+      "visible_height_px": 198,
+      "alpha_bounds": [
+        20,
+        5,
+        172,
+        203
+      ]
+    },
+    {
+      "pet": "green-zaku",
+      "frame": "idle[0]",
+      "visible_height_px": 186,
+      "alpha_bounds": [
+        32,
+        16,
+        158,
+        202
+      ]
+    },
+    {
+      "pet": "red-zaku",
+      "frame": "idle[0]",
+      "visible_height_px": 195,
+      "alpha_bounds": [
+        27,
+        8,
+        165,
+        203
+      ]
+    },
+    {
+      "pet": "gouf",
+      "frame": "idle[0]",
+      "visible_height_px": 184,
+      "alpha_bounds": [
+        16,
+        19,
+        175,
+        203
+      ]
+    },
+    {
+      "pet": "gm",
+      "frame": "idle[0]",
+      "visible_height_px": 188,
+      "alpha_bounds": [
+        16,
+        13,
+        175,
+        201
+      ]
+    }
+  ]
+}

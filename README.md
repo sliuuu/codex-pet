@@ -2,7 +2,9 @@
 
 ChatGPT Desktop-inspired digital pets that live on the desktop, react to activity, and showcase animated character behaviors through Codex-compatible v2 sprite atlases.
 
-This repository is a self-contained public showcase for three polished animated pets. It includes installable pet folders, transparent spritesheets, generated screenshots, GIF demonstrations for every supported animation state, and a small asset pipeline for regenerating the showcase media from the committed spritesheets.
+This repository is a self-contained public showcase for seven animated pets. It includes installable pet folders, transparent spritesheets, generated screenshots, GIF demonstrations for every supported animation state, and a small asset pipeline for regenerating the showcase media from the committed spritesheets.
+
+**Unofficial fan project:** The depicted characters, franchise designs, names, and trademarks belong to their respective rights holders. Public source availability, open-source licensing of code, or noncommercial use does not by itself grant rights to those characters or artwork. This repository has no `LICENSE` file; this notice grants no software or artwork license. See [Artwork Provenance and Rights](docs/ARTWORK_PROVENANCE.md).
 
 ## Feature Overview
 
@@ -10,7 +12,7 @@ This repository is a self-contained public showcase for three polished animated 
 - Installable Codex pet folders with `pet.json`, `avatar.json`, and `assets/spritesheet.webp`.
 - GitHub-rendered animation showcase using relative image paths only.
 - Reproducible preview generation via `tools/render_showcase_assets.py`.
-- Validated v2 sprite contract: `1536x2288` atlas, `8x11` grid, `192x208` cells, transparent backgrounds, no validator warnings, and strict cell-safety QA with at least 10% transparent padding per side and at most 80% silhouette occupancy.
+- All seven pets use `1536x2288` v2 atlases with an `8x11` grid and `192x208` cells. Live Pets service preflight accepts all seven sheets. The four added pets also pass the stricter local packaging/layout checks; the three original atlases fail its empty-slot check, as documented below. Strict 10% per-side padding and 80% occupancy checks belong to the historical Chibi Miku pipeline, not to every pet in this collection.
 
 ## Pets
 
@@ -19,6 +21,10 @@ This repository is a self-contained public showcase for three polished animated 
 | SD Gundam | Super-deformed mecha pixel-art mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 | Chibi Asuka | Chibi red-suit mecha-pilot mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 | Chibi Miku | Chibi teal twin-tail idol mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
+| Green Zaku | Green super-deformed mobile-suit mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
+| Red Zaku | Red super-deformed mobile-suit mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
+| Gouf | Blue, rounder and glossier mobile-suit mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
+| GM | Super-deformed GM mobile-suit mascot | `spriteVersionNumber: 2`, `1536x2288`, `8x11`, `192x208` cells |
 
 All pets include the nine standard Codex animation rows plus two v2 look-direction rows covering 16 clockwise gaze directions.
 
@@ -104,6 +110,96 @@ Blue marks each `192x208` cell, red marks the 10% safe boundary, and green marks
 
 The [Chibi Miku source lineage](showcase/chibi-miku/source-lineage.json) records the generation-to-atlas gates. Generated rows must first pass source-canvas edge, slot padding, occupancy, and transparent-gutter validation; failed source art cannot proceed to extraction or GIF export.
 
+## Green Zaku
+
+### Animation Previews
+
+| State | Preview |
+| --- | --- |
+| Idle | ![Green Zaku idle](showcase/green-zaku/animations/idle.gif) |
+| Run right / walk right | ![Green Zaku running-right](showcase/green-zaku/animations/running-right.gif) |
+| Run left / walk left | ![Green Zaku running-left](showcase/green-zaku/animations/running-left.gif) |
+| Wave / emote | ![Green Zaku waving](showcase/green-zaku/animations/waving.gif) |
+| Jump | ![Green Zaku jumping](showcase/green-zaku/animations/jumping.gif) |
+| Failed / sad emote | ![Green Zaku sad](showcase/green-zaku/animations/sad.gif) |
+| Waiting | ![Green Zaku waiting](showcase/green-zaku/animations/waiting.gif) |
+| Running / active work | ![Green Zaku running](showcase/green-zaku/animations/running.gif) |
+| Review / scanning | ![Green Zaku bouncing](showcase/green-zaku/animations/bouncing.gif) |
+| 16 look directions | ![Green Zaku look-directions](showcase/green-zaku/animations/look-directions.gif) |
+
+### Sprite Sheet Contact Sheet
+
+![Green Zaku contact sheet](showcase/green-zaku/contact-sheet.png)
+
+## Red Zaku
+
+### Animation Previews
+
+| State | Preview |
+| --- | --- |
+| Idle | ![Red Zaku idle](showcase/red-zaku/animations/idle.gif) |
+| Run right / walk right | ![Red Zaku running-right](showcase/red-zaku/animations/running-right.gif) |
+| Run left / walk left | ![Red Zaku running-left](showcase/red-zaku/animations/running-left.gif) |
+| Wave / emote | ![Red Zaku waving](showcase/red-zaku/animations/waving.gif) |
+| Jump | ![Red Zaku jumping](showcase/red-zaku/animations/jumping.gif) |
+| Failed / sad emote | ![Red Zaku sad](showcase/red-zaku/animations/sad.gif) |
+| Waiting | ![Red Zaku waiting](showcase/red-zaku/animations/waiting.gif) |
+| Running / active work | ![Red Zaku running](showcase/red-zaku/animations/running.gif) |
+| Review / scanning | ![Red Zaku bouncing](showcase/red-zaku/animations/bouncing.gif) |
+| 16 look directions | ![Red Zaku look-directions](showcase/red-zaku/animations/look-directions.gif) |
+
+### Sprite Sheet Contact Sheet
+
+![Red Zaku contact sheet](showcase/red-zaku/contact-sheet.png)
+
+## Gouf
+
+### Animation Previews
+
+| State | Preview |
+| --- | --- |
+| Idle | ![Gouf idle](showcase/gouf/animations/idle.gif) |
+| Run right / walk right | ![Gouf running-right](showcase/gouf/animations/running-right.gif) |
+| Run left / walk left | ![Gouf running-left](showcase/gouf/animations/running-left.gif) |
+| Wave / emote | ![Gouf waving](showcase/gouf/animations/waving.gif) |
+| Jump | ![Gouf jumping](showcase/gouf/animations/jumping.gif) |
+| Failed / sad emote | ![Gouf sad](showcase/gouf/animations/sad.gif) |
+| Waiting | ![Gouf waiting](showcase/gouf/animations/waiting.gif) |
+| Running / active work | ![Gouf running](showcase/gouf/animations/running.gif) |
+| Review / scanning | ![Gouf bouncing](showcase/gouf/animations/bouncing.gif) |
+| 16 look directions | ![Gouf look-directions](showcase/gouf/animations/look-directions.gif) |
+
+### Sprite Sheet Contact Sheet
+
+![Gouf contact sheet](showcase/gouf/contact-sheet.png)
+
+## GM
+
+### Animation Previews
+
+| State | Preview |
+| --- | --- |
+| Idle | ![GM idle](showcase/gm/animations/idle.gif) |
+| Run right / walk right | ![GM running-right](showcase/gm/animations/running-right.gif) |
+| Run left / walk left | ![GM running-left](showcase/gm/animations/running-left.gif) |
+| Wave / emote | ![GM waving](showcase/gm/animations/waving.gif) |
+| Jump | ![GM jumping](showcase/gm/animations/jumping.gif) |
+| Failed / sad emote | ![GM sad](showcase/gm/animations/sad.gif) |
+| Waiting | ![GM waiting](showcase/gm/animations/waiting.gif) |
+| Running / active work | ![GM running](showcase/gm/animations/running.gif) |
+| Review / scanning | ![GM bouncing](showcase/gm/animations/bouncing.gif) |
+| 16 look directions | ![GM look-directions](showcase/gm/animations/look-directions.gif) |
+
+### Sprite Sheet Contact Sheet
+
+![GM contact sheet](showcase/gm/contact-sheet.png)
+
+## Mobile-Suit Lineup
+
+![Mobile suits at a shared preview scale](showcase/mobile-suit-lineup.png)
+
+The lineup uses a shared preview scale for comparison. Gouf retains its existing rounder, glossier style; this update does not repaint it to match the other mobile suits. See the [mobile-suit validation report](docs/validation/mobile-suits.json) for recorded layout checks.
+
 ## Animation Summary
 
 | Codex row | State | Frames | Purpose |
@@ -128,9 +224,9 @@ Copy any pet folder into your local Codex pets directory:
 
 ```bash
 mkdir -p ~/.codex/pets
-cp -R pets/sd-gundam-codex-pet ~/.codex/pets/
-cp -R pets/chibi-asuka ~/.codex/pets/
-cp -R pets/chibi-miku ~/.codex/pets/
+for pet in sd-gundam-codex-pet chibi-asuka chibi-miku green-zaku red-zaku gouf gm; do
+  cp -R "pets/$pet" ~/.codex/pets/
+done
 ```
 
 Each pet folder contains:
@@ -145,7 +241,7 @@ The manifests point to `assets/spritesheet.webp` and declare `spriteVersionNumbe
 
 ## Validation
 
-All source atlases were validated with the hatch-pet atlas validator before this repo was prepared:
+The original three pets retain their historical validation records below. These are not a fresh semantic or motion-quality review of the seven-pet collection:
 
 | Pet | Result | Dimensions | Notes |
 | --- | --- | --- | --- |
@@ -153,7 +249,35 @@ All source atlases were validated with the hatch-pet atlas validator before this
 | Chibi Asuka | Pass | `1536x2288` | No clipping, no transparent RGB residue, no validator warnings |
 | Chibi Miku | Pass | `1536x2288` | One shared scale across all frames; 10% per-side transparent padding, 80% maximum occupancy, stable lower-body anchors, transparent unused cells, and no clipping, overflow, detached fragments, or validator warnings |
 
-The generated contact sheets above are rendered directly from the committed `assets/spritesheet.webp` files. Empty cells are intentional unused slots in variable-length animation rows; populated cells are clipped to `192x208` and render on transparent backgrounds.
+The four added pets are existing custom ChatGPT pet exports, packaged as lossless `1536x2288` WebP atlases. The stricter local packaging/layout validator passes these four additions and reports inherited empty-slot failures for the original three pets. Live Pets service preflight accepts all seven sheets; it does not reject the originals for those extra cells. The latest mobile-suit exports have minimum margins of only 1–9 pixels: they do not clip, but they do **not** satisfy the historical Miku pipeline's 10% padding requirement. No collection-wide strict-padding pass is claimed.
+
+Run the packaging/layout checks and regression tests with:
+
+```bash
+python tools/validate_pet_assets.py --pets green-zaku red-zaku gouf gm --json-out docs/validation/mobile-suits.json
+python -m unittest discover -s tests
+
+# Expected nonzero exit until the inherited idle-cell issues are repaired:
+python tools/validate_pet_assets.py --json-out docs/validation/all-pets.json
+```
+
+The [mobile-suit validation report](docs/validation/mobile-suits.json) records passing checks for the four additions. Tests cover the new assets and validator behavior; they do not imply that all original assets pass.
+
+**Known inherited issue:** SD Gundam, Chibi Asuka, and Chibi Miku each have artwork in idle row 0, column 6 (zero-based), while the contract uses only columns 0–5 for that row. The stricter local unused-cell check therefore fails for all three originals, as recorded in the [full repository validation report](docs/validation/all-pets.json). The original files and pet sections remain unchanged. Historical pass records above are separate from today’s service preflight and stricter local validation results. These checks distinguish atlas structure and boundary safety from whether every pose, movement, or gaze direction communicates the intended state. This update does not claim a fresh semantic or motion-quality pass.
+
+### Current Pets Service Preflight
+
+Live service preflight accepts all seven sheets, including the originals with extra idle-cell artwork. This is distinct from both the historical records above and the stricter local empty-slot check. Recorded service results:
+
+- [SD Gundam](docs/validation/sd-gundam-codex-pet-pets-preflight.json)
+- [Chibi Asuka](docs/validation/chibi-asuka-pets-preflight.json)
+- [Chibi Miku](docs/validation/chibi-miku-pets-preflight.json)
+- [Green Zaku](docs/validation/green-zaku-pets-preflight.json)
+- [Red Zaku](docs/validation/red-zaku-pets-preflight.json)
+- [Gouf](docs/validation/gouf-pets-preflight.json)
+- [GM](docs/validation/gm-pets-preflight.json)
+
+The generated contact sheets above are rendered directly from the committed `assets/spritesheet.webp` files. The contract reserves unused slots in variable-length animation rows; the inherited exceptions are noted above. Preview frames are cropped to `192x208` cells and render on transparent backgrounds.
 
 ## Regenerate Showcase Assets
 
@@ -163,6 +287,18 @@ The preview GIFs, screenshots, contact sheets, and Chibi Miku cell-safety QA ove
 python3 tools/render_showcase_assets.py
 ```
 
-The script does not alter the pet manifests or sprite sheets; it only refreshes files under `showcase/`.
+To refresh only the four additions and the shared-scale lineup, without regenerating the original previews:
 
-Source-stage boundary enforcement is tracked under [`tools/hatch_pet`](tools/hatch_pet/README.md). The guarded extractor blocks sprite-sheet creation unless every generated row first passes the 10% padding, 80% occupancy, transparent-gutter, and source-edge checks.
+```bash
+python3 tools/render_showcase_assets.py --pets green-zaku red-zaku gouf gm
+python3 tools/render_mobile_suit_lineup.py
+```
+
+These scripts do not alter the pet manifests or sprite sheets; they only refresh files under `showcase/`.
+
+The historical Chibi Miku source-stage boundary enforcement is tracked under [`tools/hatch_pet`](tools/hatch_pet/README.md). The guarded extractor blocks sprite-sheet creation unless every generated row first passes the 10% padding, 80% occupancy, transparent-gutter, and source-edge checks.
+
+
+## Artwork Provenance and Rights
+
+See [Artwork Provenance](docs/ARTWORK_PROVENANCE.md) for the November 12, 2026 export source, preservation notes, and rights limitations. This repository has no `LICENSE` file. Inclusion here does not establish rights clearance or grant a broad license to the artwork or depicted characters. Pet-generation pipeline fixes are separate work and are not included in this asset-packaging update.

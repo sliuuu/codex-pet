@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections import deque
+import argparse
 import json
 import math
 from pathlib import Path
@@ -14,6 +15,10 @@ PETS = [
     ("sd-gundam-codex-pet", "SD Gundam"),
     ("chibi-asuka", "Chibi Asuka"),
     ("chibi-miku", "Chibi Miku"),
+    ("green-zaku", "Green Zaku"),
+    ("red-zaku", "Red Zaku"),
+    ("gouf", "Gouf"),
+    ("gm", "GM"),
 ]
 CELL_W = 192
 CELL_H = 208
@@ -47,6 +52,7 @@ def font(size: int) -> ImageFont.ImageFont:
     for candidate in (
         "/System/Library/Fonts/Supplemental/Arial.ttf",
         "/System/Library/Fonts/Helvetica.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ):
         try:
             return ImageFont.truetype(candidate, size)
@@ -451,7 +457,12 @@ def save_screenshot(sheet: Image.Image, pet_name: str, out: Path) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Render previews from committed pet sprite sheets.")
+    parser.add_argument("--pets", nargs="+", choices=[pet_id for pet_id, _ in PETS], help="Only render the named pets; the default renders all pets.")
+    args = parser.parse_args()
     for pet_id, pet_name in PETS:
+        if args.pets and pet_id not in args.pets:
+            continue
         pet_dir = ROOT / "pets" / pet_id
         showcase_dir = ROOT / "showcase" / pet_id
         animations_dir = showcase_dir / "animations"

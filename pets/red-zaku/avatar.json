@@ -1,0 +1,17 @@
+{
+  "id": "red-zaku",
+  "name": "Red Zaku",
+  "displayName": "Red Zaku",
+  "description": "A compact red commander monoeye mecha with expressive animations and sixteen look directions.",
+  "version": "1.0.0",
+  "spriteVersionNumber": 2,
+  "spritesheetPath": "assets/spritesheet.webp",
+  "spritesheet": "assets/spritesheet.webp",
+  "spriteSheet": "assets/spritesheet.webp",
+  "frameWidth": 192,
+  "frameHeight": 208,
+  "frame_width": 192,
+  "frame_height": 208,
+  "columns": 8,
+  "rows": 11
+}

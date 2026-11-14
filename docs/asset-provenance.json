@@ -1,0 +1,51 @@
+{
+  "export_date": "2026-11-12",
+  "source": "Existing custom ChatGPT Pets sprite-sheet exports",
+  "base_commit": "5306d3eb027d1d1bb90e9b779b95609448beb567",
+  "artwork_changed": false,
+  "pets": [
+    {
+      "slug": "green-zaku",
+      "name": "Green Zaku",
+      "source_format": "PNG",
+      "source_sha256": "46747221621f2ff1620f0322216eb08626d05beaac9460cd3e431e6b5937ab71",
+      "repository_file": "pets/green-zaku/assets/spritesheet.webp",
+      "repository_sha256": "89b84e28c3b52966a480748897ed996c1088cb326895c8f73ed5d1fed2339e01",
+      "rgba_pixels_preserved": true
+    },
+    {
+      "slug": "red-zaku",
+      "name": "Red Zaku",
+      "source_format": "PNG",
+      "source_sha256": "a0149ba2bf50d92a8c1a37336599a8bd3a2591cac653160459b088b0595e785c",
+      "repository_file": "pets/red-zaku/assets/spritesheet.webp",
+      "repository_sha256": "279ff88ce4bb6bbc44937a5cdef74ebeaaf9f9d6978f0e5bbd22503c2ef60b6c",
+      "rgba_pixels_preserved": true
+    },
+    {
+      "slug": "gouf",
+      "name": "Gouf",
+      "source_format": "PNG",
+      "source_sha256": "7379770109c47ccf7dbf34c654098a3cefcbb0c40687b52e77b80532696af324",
+      "repository_file": "pets/gouf/assets/spritesheet.webp",
+      "repository_sha256": "4c203fc49a057217adfbe67aaee8c33974f34f1c947fd32712ed91b720e45b44",
+      "rgba_pixels_preserved": true
+    },
+    {
+      "slug": "gm",
+      "name": "GM",
+      "source_format": "PNG",
+      "source_sha256": "daff56f312d85abb828632da122c6df5d3af6a67ba1ae4f1e828da382d7aea45",
+      "repository_file": "pets/gm/assets/spritesheet.webp",
+      "repository_sha256": "2cb4a04971de32dc2a4a899acffa465746046a39bee0b5b1a202967ef3677595",
+      "rgba_pixels_preserved": true
+    }
+  ],
+  "existing_gundam_comparison": {
+    "result": "pixel-identical",
+    "repository_file": "pets/sd-gundam-codex-pet/assets/spritesheet.webp",
+    "repository_sha256": "8a2b491f57e93d56e13b633a85980c7c17b8b8f074ab22d218c8a169aaf29037",
+    "export_sha256": "58ad9a8b43932b8f27781de53c6a871884c5c46def30c403bcae0437f32e2908",
+    "action": "Original repository file retained unchanged"
+  }
+}
