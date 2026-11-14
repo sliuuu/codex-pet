@@ -36,3 +36,15 @@ Pet-generation pipeline fixes are separate work and are not included in this ass
 ## Rights and reuse
 
 This repository has no `LICENSE` file. Do not infer a broad license from public availability or from inclusion of these assets. No ownership or licensing authority is asserted over Gundam-related designs, Hatsune Miku, Asuka, or their associated names and intellectual property. Anyone considering redistribution, modification, or commercial use must independently establish the necessary permissions.
+
+### Fan project, code licensing, and character rights
+
+This is an unofficial fan project. Rights in the depicted characters and franchises, including their designs, names, and trademarks, remain with their respective rights holders. No affiliation with or endorsement by those rights holders is claimed.
+
+Software licensing and artwork rights are separate:
+
+- **Code and tooling:** The repository currently has no `LICENSE` file or declared open-source software (OSS) license. Publicly visible source code alone does not make the code OSS-licensed. This notice does not select or grant a software license.
+- **Artwork and characters:** The spritesheets, previews, and source references have separate rights considerations from the scripts. No artwork license or permission to use third-party character IP is granted by this notice. AI-assisted generation and inclusion in a fan project do not establish rights clearance.
+- **Any future license:** A license for original code or artwork can cover only rights the licensor is authorized to grant. It does not automatically license third-party character designs, names, trademarks, or reference artwork.
+
+Fan-project status, an OSS license for code, public availability, and noncommercial use do not by themselves grant permission to use third-party IP. Before reusing or redistributing code or artwork, check the applicable licenses, rights-holder permissions, and legal requirements separately. This documentation is a rights notice, not a claim that any particular use is cleared.

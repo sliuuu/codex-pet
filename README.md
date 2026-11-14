@@ -4,6 +4,8 @@ ChatGPT Desktop-inspired digital pets that live on the desktop, react to activit
 
 This repository is a self-contained public showcase for seven animated pets. It includes installable pet folders, transparent spritesheets, generated screenshots, GIF demonstrations for every supported animation state, and a small asset pipeline for regenerating the showcase media from the committed spritesheets.
 
+**Unofficial fan project:** The depicted characters, franchise designs, names, and trademarks belong to their respective rights holders. Public source availability, open-source licensing of code, or noncommercial use does not by itself grant rights to those characters or artwork. This repository has no `LICENSE` file; this notice grants no software or artwork license. See [Artwork Provenance and Rights](docs/ARTWORK_PROVENANCE.md).
+
 ## Feature Overview
 
 - Desktop-pet style characters that can idle, move, wave, jump, wait, react to failure, show active work, review/scan, and look in 16 directions.
